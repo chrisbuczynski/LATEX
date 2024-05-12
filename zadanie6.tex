@@ -1,0 +1,258 @@
+%\documentclass[a4paper,12pt]{article}
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{amsthm}
+%\usepackage[T1]{fontenc}		%% wgrywa specjalne znaki polskie
+%\usepackage[utf8]{inputenc}		%% pozwala na dobre kodowanie (dla Linuxa: utf8)
+%\usepackage[polish]{babel}  	%% warto mieć do pakietu polskiego
+%\usepackage{polski}			%% wgrywa łamanie w języku polskim
+
+
+%\usepackage{pstricks, pst-plot}
+%\usepackage{graphicx}
+%\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}	
+
+%\usepackage{enumerate}	%żeby można było dobrze numerowane i zmienia style num.
+%\usepackage{fancyhdr}	%żeby można było ustawiać swoje nagłówki stopki
+%\usepackage{amsfonts}	%żeby działały polecenia \mathbb w def. np. NN
+%\usepackage{hyperref}	%żeby działały linki www
+
+%%%% POZWALA KOMPILOWAÆ NAWET JELI S¥ DROBNE B£ÊDY %%%% 
+%\nonstopmode
+
+%\newcommand{\NN}{\mathbb{N}}
+%\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\ZZ}{\mathbb{Z}}
+%\newcommand{\NW}{\mathbb{NW}}
+%\newcommand{\WW}{\mathbb{W}}
+%\newcommand{\QQ}{\mathbb{Q}}
+%\newcommand{\IQ}{\mathbb{IQ}}
+%\newcommand{\RR}{\mathbb{R}}
+
+%\newcommand{\al}{\alpha}
+%\newcommand{\be}{\beta}
+%\newcommand{\ga}{\gamma}
+
+%\theoremstyle{definition}
+%\newtheorem{zad}{Zadanie}
+%\newtheorem{rozw}{Rozwiązanie}
+%\newtheorem{uw}{Uwaga}
+
+%\usepackage{parskip} %% dodaje odstęp w paragrafach
+
+%\begin{document}
+
+\begin{zad} %Zadanie od Zbyszka fizyka ze studiów podyplomowych
+Rozwiąż nierówność
+\[ \Big|\frac{2x-3}{x^2-1}\Big| \geq 2 \]
+\end{zad}
+
+\begin{rozw}
+$ $
+
+\underline{METODA~1}
+
+Zaczniemy od określenia dziedziny tej nierówności
+\[ |x^2-1| \neq 0 \iff x^2-1 \neq 0 \iff x\in \RR \setminus \{-1;1\}. \]
+
+Zakładamy teraz, że $x\neq 1 \wedge x \neq -1.$ Wtedy wyjściowa nierównoś, na podstawie własności modułu: $|a|\geq b \iff a\geq b \vee a\leq -b$, jest równoważna alternatywie nierówności: 
+
+\[ (I) \ \frac{2x-3}{x^2-1} \geq 2 \ \ \vee \ (II) \ \ \frac{2x-3}{x^2-1} \leq -2 \]
+
+Najpierw rozwiążemy pierwszą z~tych nierówności:
+
+\begin{align*}
+ \frac{2x-3}{x^2-1} &\geq 2 \\
+ &\Updownarrow \\
+ \frac{2x-3}{x^2-1} - 2\cdot \frac{x^2-1}{x^2-1} &\geq 0 \\
+ &\Updownarrow \\
+ \frac{2x-3-2x^2+2}{x^2-1} &\geq 0 \\
+ &\Updownarrow \\
+ \frac{-2x^2+2x-1}{x^2-1} &\geq 0 \\
+ &\Updownarrow \\
+ \underbrace{(-2x^2+2x-1)}_{\textrm{stale ujemne, gdyż $a=-2<0 \wedge \Delta=-4<0$}} \cdot \ \ (x^2-1) &\geq 0 \ \ \ | \ :(-2x^2+2x-1)<0 \\
+ &\Updownarrow \\
+ \ (x^2-1) = (x-1)(x+1)&\leq 0 \\
+ &\Updownarrow \textrm{pamiętając, że $x \in \RR\setminus \{-1;1\}$} \\
+ \ x &\in (-1;1)
+\end{align*}
+
+Teraz rowiążemy drugą z~nierówności:
+\begin{align*}
+ \frac{2x-3}{x^2-1} &\leq -2 \\
+ &\Updownarrow \\
+ \frac{2x-3}{x^2-1} + 2\cdot \frac{x^2-1}{x^2-1} &\leq 0 \\
+ &\Updownarrow \\
+ \frac{2x-3+2x^2-2}{x^2-1} &\leq 0 \\
+ &\Updownarrow \\
+ \frac{2x^2+2x-5}{x^2-1} &\leq 0 \\
+ &\Updownarrow \\
+ \ \underbrace{(2x^2+2x-5)}_{} \cdot (x^2-1) &\leq 0 \\
+ \ \Big(\Delta=4+40=44; \ \sqrt{\Delta}=2\sqrt{11}, \ x_{1}=\frac{-2-2\sqrt{11}}{4}; \ x_{2}=\frac{-2+2\sqrt{11}}{4}\Big) \\
+ &\Updownarrow \\
+ \ 2\Big(x-\frac{-1-\sqrt{11}}{2}\Big)\Big(x-\frac{-1+\sqrt{11}}{2}\Big)(x-1)(x+1) &\leq 0 \ (*) \\
+ % &\Updownarrow \textrm{pamiętając, że $x \in \RR\setminus \{-1;1\}$} \\
+% \ x \in \Big[\frac{-1-\sqrt{11}}{2}; -1\Big) \cup \Big(1; \frac{-1+\sqrt{11}}{2}\Big]
+\end{align*}
+Rozwiązanie nierówności (*) można odczytać ze~szkicu wykresu wielomianu stojącego po jej lewej stronie.
+Zauważmy, że skoro $\sqrt{11} \approx 3,32, \text{więc } x_1 \approx -2,16, \ x_2 \approx 1,16$.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,
+    axis y line=none,
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-3, xmax=2,
+    ymin=-10, ymax=10,
+    xtick={-3,-2,-1,...,2},
+    ytick={},
+    xticklabel style={below left},
+    yticklabel style={below left},
+    samples=1000,
+    domain=-2.5:2,
+]
+
+\addplot[blue, domain=-2.5:2] {2*x^4+2*x^3-7*x^2-2*x+5};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+Zobaczmy jeszcze zbliżenie wykresu w okolicach liczby 1, tam też wielomian przyjmuje wartości ujemne, co nie jest łatwe do odczytania z pełnego wykresu. 
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,
+    axis y line=none, % Ukrycie osi y
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=0.9, xmax=1.3, % "Zoom" na przedziale [0.9, 1.3]
+    xtick={0.9,1,1.16,1.3}, % Dodanie znacznika dla 1.16
+    ytick={}, % Ukrycie podziałek na osi y
+    xticklabel style={below left},
+    yticklabel style={below left},
+    samples=1000,
+    domain=0.9:1.3, % "Zoom" na przedziale [0.9, 1.3]
+]
+
+\addplot[blue, domain=0.9:1.3] {2*x^4+2*x^3-7*x^2-2*x+5};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+$ $
+$ $
+
+Pamiętając, że $x \in \RR\setminus \{-1;1\}$ stwierdzamy, że rozwiązaniem drugiej nierówności jest:
+$ x \in \Big[\frac{-1-\sqrt{11}}{2}; -1\Big) \cup \Big(1; \frac{-1+\sqrt{11}}{2}\Big) .$
+
+$ $
+$ $
+
+Z~uwagi na to, że rozwiązujemy alternatywę dwóch nierówności, do końcowej odpowiedzi musimy zaliczyć sumę zbiorów rozwiązań nierówności (I) oraz nierówności (II). Odpowiedzią jest więc zbiór: 
+
+\[ (-1;1) \cup \Big[\frac{-1-\sqrt{11}}{2}; -1\Big) \cup \Big(1; \frac{-1+\sqrt{11}}{2}\Big], \]
+co można zwięźlej zapisać jako:
+\[ \Big[\frac{-1-\sqrt{11}}{2};\frac{-1+\sqrt{11}}{2}\Big] \setminus \{-1;1\}. \]
+
+$ $
+
+\underline{METODA~2}
+
+Zaczniemy od określenia dziedziny tej nierówności
+\[ |x^2-1| \neq 0 \iff x^2-1 \neq 0 \iff x\in \RR \setminus \{-1;1\}. \]
+
+Przekształcamy nierówność równoważnie (przenosząc 2~na lewą stronę i~mnożąc obie strony nierówności przez $|x^2-1|>0$) do następującej postaci:
+
+\[  \Big|\frac{2x-3}{x^2-1}\Big| - 2 \geq 0 \iff \Big|\frac{2x-3}{x^2-1}\Big| - 2\Big|\frac{x^2-1}{x^2-1}\Big| \geq 0 \iff |2x-3| - 2|x^2-1| \geq 0 \]
+
+Korzystamy teraz z~definicji wartości bezwzględnej, żeby ,,rozbić'' powyższą nierówność na trzy przypadki (przedziały). 
+
+\[|2x-3| = \begin{cases}
+          2x-3 & \text{dla } 2x-3 \geq 0 \iff x \geq \frac{3}{2}\\
+          -(2x-3)=-2x+3 & \text{dla } 2x-3 < 0 \iff x < \frac{3}{2}
+         \end{cases}
+\]
+
+Przy rozpisywaniu $|x^2-1|$ uwzględnimy od razu dziedzinę, tzn. wykluczmy $x^2-1 = 0,$ czyli $x=1$ i~$x=-1$.
+
+\[|x^2-1| = \begin{cases}
+             x^2-1 & \text{dla } x^2-1 >0  \iff x\in(-\infty;-1)\cup(1,+\infty)\\
+             -(x^2-1)=-x^2+1 & \text{dla } x^2-1 < 0 \iff x\in(-1,1)
+            \end{cases}
+\]
+
+Rozpatrujemy teraz trzy przypadki (wynikające z~wybrania częsci wspólnych zbiorów).
+
+\underline{I~Przypadek: $x\in (-\infty,-1)\cup (1,\frac{3}{2})$}
+Nierówność $|2x-3|-2|x^2-1|\geq 0$ przyjmuje postać:
+
+\[-2x+3 -2(x^2-1) \geq 0 \iff -2x^2-2x+5 \geq 0 \]
+
+\[\Delta = (-2)^2-4\cdot(-2)\cdot5=44, \ \ \sqrt{\Delta}=2\sqrt{11} \]
+
+\[x_1=\frac{2-2\sqrt{11}}{-4}=\frac{-1-\sqrt{11}}{2}, \ \ x_2=\frac{2+2\sqrt{11}}{-4}=\frac{-1+\sqrt{11}}{2}\]
+
+Zauważmy, że skoro $\sqrt{11} \approx 3,32, \text{więc } x_1 \approx -2,16, \ x_2 \approx 1,16$. Szkicujemy parabolę i odczytujemy rozwiązywania nierówności.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis x line=middle,
+    axis y line=none, % Ukrycie osi Y
+    xlabel=$x$,
+    ylabel=$y$,
+    xmin=-3, xmax=2,
+    ymin=-2, ymax=7, % Zmienione wartości y
+    xtick={-3,-2,...,2},
+    ytick={},
+    xticklabel style={below left},
+    yticklabel style={below left},
+    samples=100,
+    domain=-3:2,
+]
+
+\addplot[blue, domain=-2.5:2] {-2*x^2 - 2*x + 5} ;
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Zatem $-2x^2-2x+5 \geq 0 \iff x\in [\frac{-1-\sqrt{11}}{2},\frac{-1+\sqrt{11}}{2}]$.\\
+
+Uwzględniamy teraz założenia związane z~przypadkiem pierwszym i~otrzymujemy odpowiedź do tej części rozwiązania zadania: 
+\[ x\in \Big[\frac{-1-\sqrt{11}}{2},-1\Big) \cup \Big(1, \frac{-1+\sqrt{11}}{2}\Big]\]
+
+\underline{II~Przypadek: $x\in(-1,1)$} Nierówność $|2x-3|-2|x^2-1|\geq 0$ przyjmuje postać:
+
+\[-2x+3-2(-x^2+1)\geq 0 \iff 2x^2-2x+1 \geq 0 \iff x^2 + (x-1)^2 \geq 0 \]
+
+Lewa strona powyższej nierówności jako suma kwadratów jest nieujemna w~całym rozpatrywanym przedziale. Zatem dla przypadku II otrzymjemy rozwiązania: $x \in (-1,1)$.
+
+\underline{II~Przypadek: $x\in[\frac{3}{2},+ \infty)$} Nierówność $|2x-3|-2|x^2-1|\geq 0$ przyjmuje postać:
+
+\[ 2x-3-2(x^2-1)\geq 0 \iff -2x^2+2x-1 \geq 0 \iff x^2 + (x-1)^2 \leq 0 \]
+
+Lewa strona powyższej nierówności jako suma kwadratów jest nieujemna w~całym rozpatrywanym przedziale, jedyną szansą na by lewa strona była równa zeru jest $x^2 = 0  \iff x=0$~i jednocześnie~$(x-1)^2=0 \iff x=1$, co jest niemożliwe. 
+Zatem dla przypadku III otrzymjemy brak rozwiązań. Inaczej mówiąc, zbiór rozwiązań jest zbiorem pustym.
+
+\underline{Odpowiedź}: Sumując zbiory rozwiazań z~trzech przypadków, otrzymujemy, że odpowiedzią jest zbiór:
+
+\[ \Big[\frac{-1-\sqrt{11}}{2}; -1\Big) \cup \Big(1; \frac{-1+\sqrt{11}}{2}\Big] \cup (-1;1), \]
+co można zwięźlej zapisać jako:
+\[ \Big[\frac{-1-\sqrt{11}}{2};\frac{-1+\sqrt{11}}{2}\Big] \setminus \{-1;1\}. \]
+
+$ $
+
+
+\end{rozw}
+
+%\begin{flushright} Opracował\\
+%Krzysztof Buczyński\\
+%https://www.prostamatma.pl\\
+%\href{mailto: kontakt@prostamatma.pl}{kontakt@prostamata.pl}\\
+%DATA
+%\end{flushright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+%\end{document}

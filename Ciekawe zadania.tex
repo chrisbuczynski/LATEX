@@ -1,0 +1,124 @@
+\documentclass[a4paper,12pt, twoside]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage[T1]{fontenc}		%% wgrywa specjalne znaki polskie
+\usepackage[utf8]{inputenc}		%% pozwala na dobre kodowanie (dla Linuxa: utf8)
+\usepackage[polish]{babel}  	%% warto mieć do pakietu polskiego
+\usepackage{polski}			%% wgrywa łamanie w języku polskim
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+
+%\usepackage{pstricks, pst-plot}
+\usepackage{graphicx}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}	
+
+\usepackage{enumerate}	%żeby można było dobrze numerowane i zmienia style num.
+\usepackage{fancyhdr}	%żeby można było ustawiać swoje nagłówki stopki
+\usepackage{amsfonts}	%żeby działały polecenia \mathbb w def. np. NN
+%\usepackage{hyperref}	%żeby działały linki www
+
+%%%% POZWALA KOMPILOWAÆ NAWET JELI S¥ DROBNE B£ÊDY %%%% 
+\nonstopmode
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NW}{\mathbb{NW}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\IQ}{\mathbb{IQ}}
+\newcommand{\RR}{\mathbb{R}}
+
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+
+\theoremstyle{definition}
+\newtheorem{zada}{Zadanie}
+\newtheorem{zad}{Zadanie}
+\newtheorem{rozw}{Rozwiązanie}
+\newtheorem{uw}{Uwaga}
+
+\usepackage{parskip} %% dodaje odstęp w paragrafach
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+
+\fancyhead[L]{Krzysztof Buczyński}
+\fancyhead[C]{Prosta Matma --- zadania mniej typowe}
+\fancyhead[R]{Strona \thepage.}
+\fancyfoot[L]{}
+\fancyfoot[C]{kontakt: prostamatma.info@gmail.com}
+\fancyfoot[R]{}
+
+
+\vspace*{2cm}
+
+\begin{center}
+    \textbf{\Huge  WSTĘP}
+\end{center}
+
+\vspace*{2cm}
+
+\noindent  Z przyjemnością prezentuję 'mini' zbiór zadań matematycznych przeznaczonych głównie dla uczniów szkół średnich, których celem jest rozwijanie kreatywności, intuicji matematycznej oraz umiejętności myślenia "out of the box". Zadania zawarte w tym zbiorku są tak dobrane, aby stymulować umysł uczniów, zachęcając ich do poszukiwania nietypowych rozwiązań i zależności.
+
+Moim celem jest zachęcenie czytelników do samodzielnego myślenia i poszukiwania rozwiązań mniej typowych zadań matematycznych, wymykających się "szablonowemu podejściu". Dlatego też, namawiam do podejmowania prób rozwiązania zadań nawet, gdy wydają się one z początku trudne, czy nieosiągalne. Wiem, że często to właśnie w wymagających momentach rodzi się prawdziwa fascynacja matematyką i jej metodami. Zadania należy rozwiązać samodzielnie, nie zniechęcając się nawet przy kilku nieudanych podejściach. Dopiero po wyczerpaniu swoich własnych pomysłów, czytelnik powinien sięgnąć do sekcji z rozwiązaniami i dokładnie je przeanalizować, a następnie po pewnym czasie powrócić do zadania i postarać się rozwiązać je samodzielnie. Takie podejście zaprocentuje wyrobieniem własnego warsztatu matematycznego i pomoże w rozwiązaniu inny zadań w przyszłości.
+
+Warto podkreślić, że większość zadań zawartych w tym zbiorze nie jest mojego autorstwa, lecz została zebrana z różnych ogólnie dostępnych źródeł. Pomimo staranności, czasami trudne (a faktycznie rzecz mówiąc: niemożliwe) jest zlokalizowanie pierwotnego źródło danego zadania. Dlatego też, chciałbym w tym miejscu podziękować wszystkim twórcom, którzy dzieląc się swoją pasją do matematyki, inspirują kolejne pokolenia matematyków i miłośników tej nauki.
+
+Zapraszm do skorzystania z podanego tu materiału i wycieczki do ciekawej krainy matematyki! Powodzenia! 
+
+\begin{flushright} Krzysztof Buczyński \end{flushright}
+
+\vspace*{5cm}
+\textit{Uwaga techniczna:} W całej pracy będziemy rozważać tylko dziedzinę liczb rzeczywistych, oznaczanych przez: $\mathbb{R}.$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\vspace*{\fill} % Dodanie pustej przestrzeni na górze strony
+\begin{center}
+    \textbf{\Huge  ZADANIA}
+\end{center}
+\vspace*{\fill} % Dodanie pustej przestrzeni na dole strony
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{zadania}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\vspace*{\fill} % Dodanie pustej przestrzeni na górze strony
+\begin{center}
+    \textbf{\Huge  ROZWIĄZANIA}
+\end{center}
+\vspace*{\fill} % Dodanie pustej przestrzeni na dole strony
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{zadanie1}
+\include{zadanie2}
+\include{zadanie3}
+\include{zadanie4}
+\include{zadanie5}
+\include{zadanie6}
+\include{zadanie7}
+\include{zadanie8}
+\include{zadanie9}
+\include{zadanie10}
+\include{zadanie11}
+\include{zadanie12}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+\end{document}
